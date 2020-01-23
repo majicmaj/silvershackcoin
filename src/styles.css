@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-rows: 70% 30%;
+}
+
+ul {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 968px) {
+  .App {
+    grid-template-areas: "left" "right";
+    grid-template-rows: 100%;
+  }
+
+  button {
+    padding: 10px;
+    width: height;
+  }
+}

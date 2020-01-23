@@ -1,2 +1,0 @@
-# silvershackcoin
-Created with CodeSandbox
