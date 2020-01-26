@@ -2,35 +2,12 @@ body {
   margin: 0;
 }
 
-.Nav {
-  background: #133385;
-  color: white;
-  height: 60px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 20px;
-}
-
-nav input {
-  font-size: 24px;
-  height: 40px;
-  border-radius: 3px;
-  padding-left: 10px;
-  margin-left: 20px;
-}
-
-nav h1 {
-  font-size: 30px;
-  font-weight: bold;
-  margin-left: 20px;
-}
 .App {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: #eee;
+  background: rgb(241, 240, 240);
   height: 200;
   height: auto;
 }
@@ -41,103 +18,4 @@ nav h1 {
   max-width: 1098px;
   background: white;
   padding: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  height: 100%;
-}
-
-.Listings {
-  display: flex;
-  flex-direction: column;
-  height: min-content;
-  background: #fff;
-  height: min-content;
-}
-
-.item {
-  border-top: solid 1px #e3e3e3;
-  display: flex;
-  height: min-content;
-  padding: 10px;
-}
-
-.item img {
-  height: 250px;
-  width: 250px;
-  object-fit: contain;
-  border: solid 1px #e3e3e3;
-  border-radius: 5px;
-}
-
-.item div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.item button {
-  background: #133385;
-  color: white;
-  border: 1px solid #133385;
-  align-self: flex-end;
-  padding: 10px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 3px;
-}
-
-.item h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.Cart {
-  border-top: solid 1px #e3e3e3;
-  margin: 0;
-  padding: 0;
-  background: white;
-  height: min-content;
-}
-
-.space {
-  height: 0;
-}
-@media only screen and (max-width: 968px) {
-  .App {background: white;
-  }
-
-  .body {
-    padding: 0;
-  }
-    
-  }
-
-  button {
-    padding: 10px;
-    width: height;
-  }
-
-  .item img {
-    height: 120px;
-    width: 120px;
-    border-radius: 4px;
-  }
-  .Listings input {
-    font-size: 14px;
-    height: 40px;
-    border-radius: 20px;
-    padding-left: 20px;
-  }
-
-  .listing h3,
-  .item h3 {
-    font-size: 14px;
-  }
-  .item p {
-    font-size: 12px;
-  }
 }

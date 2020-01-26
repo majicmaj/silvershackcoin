@@ -1,0 +1,82 @@
+.Cart {
+  border-top: solid 1px #e3e3e3;
+  margin: 0;
+  padding: 0;
+  background: white;
+  height: min-content;
+  width: 100%;
+  background: #eee;
+  border-radius: 12px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.Cart ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.Cart li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #eee;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.Cart img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+.Cart button {
+  background: #302950;
+  border: 1px solid #302950;
+  border-radius: 5px;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  font-weight: bold;
+  align-self: center;
+}
+
+.Cart .buttons {
+  align-items: flex-end;
+  align-self: flex-end;
+}
+.Cart button:hover {
+  background: #fff;
+  border: 1px solid #302950;
+  color: #302950;
+}
+
+.Cart .checkout {
+  background: #f02;
+  border: 1px solid #f02;
+  width: 300px;
+}
+.Cart .checkout:hover {
+  background: white;
+  border: 1px solid#f02;
+  color: #f02;
+}
+
+@media only screen and (max-width: 1098px) {
+  .Cart img {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -1,7 +1,14 @@
 import React, { Component } from "react";
-import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 import listings from "./listings.json";
+import { Switch, Route } from "react-router-dom";
+
+// Components
+import Cart from "./Components/Cart/Cart";
+import Nav from "./Components/Nav/Nav";
+import Listings from "./Components/Listings/Listings";
+import Checkout from "./Components/Checkout/Checkout";
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +16,8 @@ class App extends Component {
     this.state = {
       searchString: "",
       cart: [],
-      listings: []
+      listings: [],
+      total: 0
     };
   }
 
@@ -17,23 +25,44 @@ class App extends Component {
     this.setState({
       listings: listings
     });
-    this.refs.search.focus();
+    // this.refs.search.focus();
   }
-  handleChange = () => {
+  handleChange = str => {
     this.setState({
-      searchString: this.refs.search.value
+      searchString: str
     });
+  };
+
+  handleCheckout = () => {
+    console.log(this.state.total);
+    console.log(
+      this.state.cart.filter(item => {
+        if (item.quantity) {
+          return item;
+        }
+      })
+    );
   };
   changeQuantity = (id, num) => {
     console.log(num);
 
     this.setState(state => {
-      const cart = state.cart.map((item, i) => {
-        console.log(i + " : " + id);
+      const cart = state.cart.filter(item => {
         if (item.id === id) {
-          return (item.quantity = item.quantity + num);
+          this.setState({
+            total: Number(Number(this.state.total) + num * item.price).toFixed(
+              2
+            )
+          });
+          item.quantity += num;
+          if (item.quantity) {
+            return item;
+          } else {
+            console.log("Deleted");
+            item = undefined;
+            return null;
+          }
         } else {
-          console.log("uh");
           return item;
         }
       });
@@ -47,6 +76,7 @@ class App extends Component {
         cart = this.state.cart.map(item => {
           if (item.id === id) {
             item.quantity++;
+            console.log(this.state.total);
           }
           return item;
         });
@@ -56,9 +86,13 @@ class App extends Component {
         item.quantity = 1;
         cart.push(item);
       }
+      this.setState({
+        total: Number(
+          Number(this.state.total) + this.state.listings[id].price
+        ).toFixed(2)
+      });
       return cart;
     });
-    console.log(this.state.cart);
   };
 
   render() {
@@ -73,58 +107,42 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div className="Nav">
-          <h1>Silver Shack Coins</h1>
-          <input
-            type="text"
-            value={this.state.searchString}
-            ref="search"
-            onChange={this.handleChange}
-            placeholder="search for an item"
-          />
-        </div>
+        <Nav
+          search={search}
+          searchString={this.state.searchString}
+          handleChange={this.handleChange}
+        />
         <div className="body">
-          <div className="Listings">
-            <h3>Listings</h3>
-            <ul>
-              {_listings.map(item => (
-                <li className="item listing" key={item.id} id={item.id}>
-                  <img alt="" src={item.img} />
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.blurb}</p>
-                    <p>price: US ${item.price}</p>
-                    <button onClick={() => this.addToCart(item.id)}>
-                      add to cart
-                    </button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="Cart">
-            <h3>Cart</h3>
-            <ul>
-              {_cart.map(item => {
-                if (item.quantity > 0) {
-                  return (
-                    <li className="item cartitem" key={item.id} id={item.id}>
-                      <img alt="" src={item.img} />
-                      <p>{item.title}</p>
-                      <p>Quantity:{item.quantity}</p>
-                      <button onClick={() => this.changeQuantity(item.id, -1)}>
-                        -
-                      </button>
-                      <button onClick={() => this.changeQuantity(item.id, 1)}>
-                        +
-                      </button>
-                    </li>
-                  );
-                } else return "";
-              })}
-            </ul>
-            <button>Check Out</button>
-          </div>
+          <Switch>
+            <Route
+              path="/cart"
+              component={() => (
+                <Cart
+                  total={this.state.total}
+                  _cart={_cart}
+                  changeQuantity={this.changeQuantity}
+                  handleCheckout={this.handleCheckout}
+                />
+              )}
+            />
+            <Route
+              path="/checkout"
+              component={() => (
+                <Checkout
+                  total={this.state.total}
+                  _cart={_cart}
+                  changeQuantity={this.changeQuantity}
+                  handleCheckout={this.handleCheckout}
+                />
+              )}
+            />
+            <Route
+              path="/"
+              component={() => (
+                <Listings _listings={_listings} addToCart={this.addToCart} />
+              )}
+            />
+          </Switch>
         </div>
       </div>
     );

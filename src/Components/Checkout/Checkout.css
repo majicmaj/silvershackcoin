@@ -1,0 +1,50 @@
+.Checkout .shipping {
+  padding: 10px;
+}
+
+.Checkout input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.Checkout .shipping {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Checkout .shipping .col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Checkout .shipping div p {
+  width: 100%;
+}
+
+.Checkout .shipping .row {
+  display: flex;
+}
+.Checkout button {
+  background: #f02;
+  border: 1px solid #f02;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  height: 42px;
+  font-weight: bold;
+}
+.Checkout .cart {
+  width: 42px;
+  background: #302950;
+  border: 1px solid #302950;
+}
+.Checkout button:hover {
+  background: white;
+  border: 1px solid#f02;
+  color: #f02;
+}

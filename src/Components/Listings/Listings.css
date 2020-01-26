@@ -1,0 +1,86 @@
+.Listings ul {
+  list-style: none;
+  padding: 0;
+  height: 100%;
+}
+
+.Listings {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  background: #fff;
+  height: min-content;
+}
+
+.Listings li {
+  border-top: solid 1px #e3e3e3;
+  display: flex;
+  height: min-content;
+  padding: 10px;
+  width: 100%;
+}
+
+.Listings img {
+  height: 250px;
+  min-width: 250px;
+  object-fit: contain;
+  border: solid 1px #e3e3e3;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.Listings .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.Listings button {
+  background: #302950;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  height: 42px;
+  width: 42px;
+  align-self: flex-end;
+  border: 1px solid #302950;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+.Listings button:hover {
+  background: #fff;
+  color: #302950;
+}
+.Listings h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #121111;
+}
+
+.Listings p {
+  font-size: 15px;
+  color: #121111;
+  font-family: Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 1098px) {
+  .Listings h3 {
+    font-size: 16px;
+  }
+
+  .Listings p {
+    font-size: 14px;
+  }
+  .Listings img {
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
