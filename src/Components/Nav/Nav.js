@@ -38,7 +38,7 @@ class Nav extends Component {
               </Link>
             </div>
           </div>
-          <Link to="/cart">
+          <Link className="link" to="/cart">
             <i className="fas fa-shopping-cart button cart" />
           </Link>
         </div>
