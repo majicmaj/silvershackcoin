@@ -35,13 +35,7 @@ class App extends Component {
 
   handleCheckout = () => {
     console.log(this.state.total);
-    console.log(
-      this.state.cart.filter(item => {
-        if (item.quantity) {
-          return item;
-        }
-      })
-    );
+    console.log(this.state.cart.filter(item => item.quantity > 0));
   };
   changeQuantity = (id, num) => {
     console.log(num);
