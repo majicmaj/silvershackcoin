@@ -43,8 +43,13 @@
   background: #302950;
   border: 1px solid #302950;
 }
-.Checkout button:hover {
+.Checkout button:active {
   background: white;
   border: 1px solid#f02;
   color: #f02;
+}
+.Checkout button:hover {
+  background: white;
+  border: 1px solid#302950;
+  color: #302950;
 }

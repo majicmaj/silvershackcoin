@@ -33,5 +33,41 @@
     "blurb": "Jefferson War Nickels with 35% Silver 1942-1945. Choose How Many!",
     "img": "https://i.ebayimg.com/images/g/oFMAAOSwXulc4gdi/s-l1600.png",
     "price": 1.99
+  },
+  {
+    "id": 5,
+    "title": "Washington Quarters (1932-1964)",
+    "blurb": "90% Silver Washington Quarters (1932-1964) - Choose How Many",
+    "img": "https://i.ebayimg.com/images/g/apgAAOSwSPJdfsEx/s-l500.jpg",
+    "price": 5.45
+  },
+  {
+    "id": 6,
+    "title": "Circulated Mercury Dime",
+    "blurb": "90% Silver Circulated Mercury Dime",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/71JKCYrGEvL._SX342_.jpg",
+    "price": 5.45
+  },
+  {
+    "id": 7,
+    "title": "Washington Quarters (1932-1964)",
+    "blurb": "90% Silver Washington Quarters (1932-1964) - Choose How Many",
+    "img": "https://i.ebayimg.com/images/g/apgAAOSwSPJdfsEx/s-l500.jpg",
+    "price": 2.99
+  },
+  {
+    "id": 8,
+    "title": "Indian Head Cents (1859-1909)",
+    "blurb": "Indian Head Cents 1859-1909, Choose How Many!",
+    "img": "https://i.ebayimg.com/images/g/tj8AAOSwsw9dqkH4/s-l1600.png",
+    "price": 2.69
+  },
+
+  {
+    "id": 9,
+    "title": "Silver 1 Gram Skull Queen Bullion",
+    "blurb": "1 Gram .999 Fine Silver Fractional Bullion Round -Skull Queen Design ",
+    "img": "https://i.ebayimg.com/images/g/5NgAAOSwFDdddWU~/s-l1600.jpg",
+    "price": 2.25
   }
 ]

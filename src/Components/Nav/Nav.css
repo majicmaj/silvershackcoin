@@ -4,13 +4,12 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #ddd;
 }
 .Nav {
   color: white;
   height: 60px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-left: 20px;
   width: 100%;
@@ -42,6 +41,13 @@ nav {
   color: #eee;
 }
 
+.Nav .left {
+  display: flex;
+}
+
+.Nav .left .search {
+  display: flex;
+}
 .Nav i {
   color: #eee;
 }
@@ -74,4 +80,32 @@ nav {
   background: white;
   border: 1px solid #ccc;
   color: #302950;
+}
+
+@media only screen and (max-width: 1098px) {
+  .Nav {
+    height: min-content;
+    justify-content: center;
+  }
+  .Nav .left {
+    flex-direction: column;
+  }
+
+  .Nav h1 {
+    font-size: 20px;
+  }
+
+  .Nav input {
+    font-size: 14px;
+    height: 24px;
+  }
+
+  .Nav .button {
+    height: 24px;
+    width: 24px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

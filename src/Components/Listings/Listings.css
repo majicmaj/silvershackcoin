@@ -1,9 +1,51 @@
-.Listings ul {
+.Listings {
+  width: 100%;
+}
+
+.Listings .listView {
   list-style: none;
   padding: 0;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Listings .itemView {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 100%;
 }
 
+.Listings .view {
+  display: flex;
+  justify-content: flex-start;
+  height: min-content;
+  background: #ddd;
+  width: 100%;
+}
+
+.Listings .view button {
+  padding: 0;
+  height: 25px;
+  width: 80px;
+  font-weight: normal;
+  font-size: 16px;
+  border-radius: 0;
+  background: #999;
+  border: 1px solid #999;
+}
+
+.Listings .view button:hover {
+  color: #999;
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.Listings .view button:active {
+  color: #302950;
+  background: #fff;
+  border: 1px solid #fff;
+}
 .Listings {
   display: flex;
   flex-direction: column;
@@ -53,10 +95,19 @@
   border: 1px solid #302950;
   border-radius: 5px;
   padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Listings button:hover {
   background: #fff;
   color: #302950;
+}
+
+.Listings button:active {
+  background: #fff;
+  border: 1px solid #f02;
+  color: #f02;
 }
 .Listings h3 {
   font-size: 20px;

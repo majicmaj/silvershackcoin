@@ -17,5 +17,6 @@ body {
   align-self: center;
   max-width: 1098px;
   background: white;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }

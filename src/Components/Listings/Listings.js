@@ -5,7 +5,7 @@ class Listings extends Component {
   render() {
     return (
       <div className="Listings">
-        <ul>
+        <div className="listView">
           {this.props._listings.map(item => (
             <li className="item listing" key={item.id} id={item.id}>
               <img alt="" src={item.img} />
@@ -19,7 +19,7 @@ class Listings extends Component {
               </button>
             </li>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }

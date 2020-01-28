@@ -19,24 +19,29 @@ class Nav extends Component {
     return (
       <nav>
         <div className="Nav">
-          <Link to="/">
-            <h1>
-              <i className="fas fa-coins" /> SILVER SHACK COINS
-            </h1>
+          <div className="left">
+            <Link to="/">
+              <h1>
+                <i className="fas fa-coins" /> SILVER SHACK COINS
+              </h1>
+            </Link>
+            <div className="search">
+              <input
+                type="text"
+                value={this.props.searchString}
+                ref="search"
+                onChange={this.handleChange}
+                placeholder="search for an item"
+              />
+              <Link to="/">
+                <i className="fas fa-search button" />
+              </Link>
+            </div>
+          </div>
+          <Link to="/cart">
+            <i className="fas fa-shopping-cart button cart" />
           </Link>
-          <input
-            type="text"
-            value={this.props.searchString}
-            ref="search"
-            onChange={this.handleChange}
-            placeholder="search for an item"
-          />
-          <i className="fas fa-search button" />
         </div>
-
-        <Link to="/cart">
-          <i className="fas fa-shopping-cart button cart" />
-        </Link>
       </nav>
     );
   }

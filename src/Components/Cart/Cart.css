@@ -4,7 +4,7 @@
   padding: 0;
   background: white;
   height: min-content;
-  width: 100%;
+  width: 90%;
   background: #eee;
   border-radius: 12px;
   padding: 10px;
@@ -57,9 +57,14 @@
   align-items: flex-end;
   align-self: flex-end;
 }
+.Cart button:active {
+  background: white;
+  border: 1px solid#f02;
+  color: #f02;
+}
 .Cart button:hover {
-  background: #fff;
-  border: 1px solid #302950;
+  background: white;
+  border: 1px solid#302950;
   color: #302950;
 }
 
@@ -70,9 +75,13 @@
 }
 .Cart .checkout:hover {
   background: white;
+  border: 1px solid#302950;
+  color: #302930;
+}
+.Cart checkout:active {
+  background: white;
   border: 1px solid#f02;
   color: #f02;
-}
 
 @media only screen and (max-width: 1098px) {
   .Cart img {
