@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import listings from "./listings.json";
+import axios from "axios";
 import { Switch, Route } from "react-router-dom";
 
 // Components
@@ -22,8 +22,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      listings: listings
+    axios.get("https://silvershackcoins.herokuapp.com/listings").then(r => {
+      let listings = r.data;
+      this.setState({ listings: listings });
+      console.log(r.data);
     });
     // this.refs.search.focus();
   }
@@ -76,7 +78,7 @@ class App extends Component {
         });
       } else {
         cart = state.cart;
-        let item = listings[id];
+        let item = this.state.listings[id];
         item.quantity = 1;
         cart.push(item);
       }

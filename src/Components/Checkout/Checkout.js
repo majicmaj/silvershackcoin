@@ -1,12 +1,22 @@
 import React, { Component } from "react";
-import "./Checkout.css";
+
 import "../Cart/Cart.css";
+import "./Checkout.css";
 class Checkout extends Component {
   constructor(props) {
     super();
     this.state = {};
   }
-
+  onToken = token => {
+    fetch("/save-stripe-token", {
+      method: "POST",
+      body: JSON.stringify(token)
+    }).then(response => {
+      response.json().then(data => {
+        alert(`We are in business, ${"majd.tarbin@outlook.com"}`);
+      });
+    });
+  };
   componentDidMount() {}
   render() {
     return (
@@ -77,9 +87,7 @@ class Checkout extends Component {
           <p>Phone Number</p>
           <input />
         </div>
-        <button className="checkout" onClick={this.props.handleCheckout}>
-          Place Order
-        </button>
+        <button className="checkout">Place Order</button>
       </div>
     );
   }

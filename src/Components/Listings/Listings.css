@@ -1,4 +1,9 @@
 .Listings {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  background: #fff;
+  height: min-content;
   width: 100%;
 }
 
@@ -47,20 +52,13 @@
   background: #fff;
   border: 1px solid #fff;
 }
-.Listings {
-  display: flex;
-  flex-direction: column;
-  height: min-content;
-  background: #fff;
-  height: min-content;
-}
-
 .Listings li {
-  border-top: solid 1px #e3e3e3;
+  border-top: solid 1px #eee;
   display: flex;
   height: min-content;
   padding: 10px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .Listings img {
@@ -101,6 +99,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 5px #e3e3e3;
+  margin: 10px;
 }
 .Listings button:hover {
   background: #fff;
@@ -116,32 +115,55 @@
   font-size: 22px;
   font-weight: bold;
   color: #241123;
+  margin: 10px;
 }
 
 .Listings p {
   font-size: 18px;
   color: #241123;
+  margin: 10px;
+  align-content: left;
 }
 
+.Listings .oos {
+  background: #f04;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  height: 42px;
+  width: 145px;
+  align-self: flex-end;
+  border: 1px solid #f04;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px #e3e3e3;
+  margin: 10px;
+}
 @media only screen and (max-width: 1098px) {
   .Listings li {
     height: 140px;
   }
   .Listings h3 {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
   }
 
   .Listings p {
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
   }
   .Listings img {
     min-width: 100px;
     width: 100px;
     height: 100px;
+    margin-right: 0;
   }
   .Listings button {
     font-size: 22px;
     height: 42px;
     width: 52px;
+    margin-left: 0;
   }
 }

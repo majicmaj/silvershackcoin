@@ -2,6 +2,17 @@ import React, { Component } from "react";
 import "./Listings.css";
 
 class Listings extends Component {
+  isAvailable = props => {
+    let a = props.a;
+    console.log(a);
+    if (a) {
+      return (
+        <button onClick={() => this.props.addToCart(item.id)}>
+          <i className="fas fa-cart-plus" />
+        </button>
+      );
+    } else return <p className="oos">SOLD OUT</p>;
+  };
   render() {
     return (
       <div className="Listings">
@@ -12,11 +23,9 @@ class Listings extends Component {
               <div className="details">
                 <h3>{item.title}</h3>
                 <p>{item.blurb}</p>
-                <p className="price">US ${item.price}</p>
+                <p className="price">US ${item.price / 100}</p>
               </div>
-              <button onClick={() => this.props.addToCart(item.id)}>
-                <i className="fas fa-cart-plus" />
-              </button>
+              <this.isAvailable a={item.availability} />
             </li>
           ))}
         </div>
