@@ -143,7 +143,7 @@
 }
 @media only screen and (max-width: 1098px) {
   .Listings li {
-    height: 140px;
+    height: 220px;
   }
   .Listings h3 {
     font-size: 14px;
@@ -151,19 +151,24 @@
   }
 
   .Listings p {
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
   }
   .Listings img {
     min-width: 100px;
     width: 100px;
     height: 100px;
+    margin: 4px;
     margin-right: 0;
   }
   .Listings button {
     font-size: 22px;
     height: 42px;
     width: 52px;
+    margin: 4px;
     margin-left: 0;
+  }
+  .Listings .oos {
+    font-size: 12px;
   }
 }

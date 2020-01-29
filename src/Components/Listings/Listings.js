@@ -22,7 +22,7 @@ class Listings extends Component {
               <img alt="" src={item.img} />
               <div className="details">
                 <h3>{item.title}</h3>
-                <p>{item.blurb}</p>
+                <p className="blurb">{item.blurb}</p>
                 <p className="price">US ${item.price / 100}</p>
               </div>
               <this.isAvailable a={item.availability} />
