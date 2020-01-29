@@ -9,6 +9,7 @@ import Cart from "./Components/Cart/Cart";
 import Nav from "./Components/Nav/Nav";
 import Listings from "./Components/Listings/Listings";
 import Checkout from "./Components/Checkout/Checkout";
+import Item from "./Components/Item/Item";
 
 class App extends Component {
   constructor(props) {
@@ -129,6 +130,18 @@ class App extends Component {
                   _cart={_cart}
                   changeQuantity={this.changeQuantity}
                   handleCheckout={this.handleCheckout}
+                />
+              )}
+            />
+            <Route
+              path="/listings/:id"
+              exact
+              render={routeProps => (
+                <Item
+                  _listings={_listings}
+                  addToCart={this.addToCart}
+                  changeQuantity={this.changeQuantity}
+                  {...routeProps}
                 />
               )}
             />

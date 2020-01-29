@@ -20,7 +20,7 @@ class Cart extends Component {
                   <img alt="" src={item.img} />
                   <div>
                     <p>{item.title}</p>
-                    <p>Price: ${item.price}</p>
+                    <p>Price: ${item.price / 100}</p>
                     <p>Quantity: {item.quantity}</p>
                   </div>
                   <div className="buttons">
@@ -42,7 +42,7 @@ class Cart extends Component {
           })}
         </ul>
         <p>
-          Total: $<span className="total">{this.props.total}</span>
+          Total: $<span className="total">{this.props.total / 100}</span>
         </p>
 
         <Link to="/checkout">
