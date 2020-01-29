@@ -5,9 +5,9 @@ class Listings extends Component {
   isAvailable = props => {
     let a = props.a;
     console.log(a);
-    if (a) {
+    if (a.availability) {
       return (
-        <button onClick={() => this.props.addToCart(item.id)}>
+        <button onClick={() => this.props.addToCart(a.id)}>
           <i className="fas fa-cart-plus" />
         </button>
       );
@@ -25,7 +25,7 @@ class Listings extends Component {
                 <p className="blurb">{item.blurb}</p>
                 <p className="price">US ${item.price / 100}</p>
               </div>
-              <this.isAvailable a={item.availability} />
+              <this.isAvailable a={item} />
             </li>
           ))}
         </div>
