@@ -22,7 +22,7 @@ class Nav extends Component {
           <div className="left">
             <Link to="/">
               <h1>
-                <i className="fas fa-coins" /> SILVER SHACK COINS
+                <i className="fas fa-coins logo" /> SILVER SHACK COINS
               </h1>
             </Link>
             <div className="search">

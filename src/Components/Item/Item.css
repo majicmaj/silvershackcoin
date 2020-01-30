@@ -5,6 +5,11 @@
   align-content: center;
   align-items: center;
   flex-direction: column;
+  background: #eee;
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .single-item h3 {
@@ -14,14 +19,11 @@
 }
 .single-item img {
   border-radius: 10px;
-  max-width: 80%;
-  max-width: 800px;
+  width: 80%;
   box-shadow: 5px 5px 5px #ddd;
 }
 
 .single-item .details {
-  background: #eee;
-  border-radius: 10px;
   top-padding: 20px;
   bottom-padding: 20px;
   width: 80%;

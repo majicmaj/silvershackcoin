@@ -83,12 +83,12 @@ class App extends Component {
         item.quantity = 1;
         cart.push(item);
       }
-      this.setState({
-        total: Number(
-          Number(this.state.total) + this.state.listings[id].price
-        ).toFixed(2)
-      });
       return cart;
+    });
+    this.setState({
+      total: Number(
+        Number(this.state.total) + this.state.listings[id].price
+      ).toFixed(2)
     });
   };
 

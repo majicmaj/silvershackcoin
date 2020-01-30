@@ -23,7 +23,10 @@ class Item extends Component {
           <img alt="" src={item.img} />
           <div className="details">
             <p>Price: ${item.price / 100}</p>
-            <p>Quantity in Cart: {item.quantity || "none"}</p>
+            <p>
+              Quantity in
+              <i className="fas fa-shopping-cart" />: {item.quantity || "none"}
+            </p>
           </div>
           <div className="buttons">
             <button
