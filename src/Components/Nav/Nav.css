@@ -4,7 +4,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 .Nav {
   color: white;
@@ -27,7 +27,7 @@ nav {
   padding-left: 10px;
   margin-left: 20px;
   display: flex;
-  border: #c4c3c3 1px solid;
+  border: #ddd 1px solid;
   border-right: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -93,7 +93,7 @@ a:focus {
 .Nav .cart {
   border-radius: 3px;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 650px) {
   .Nav {
     justify-content: center;
     padding: 8px;
