@@ -1,6 +1,10 @@
 .Listings {
   width: 100%;
 }
+.Listings .toggle {
+  position: fixed;
+  right: 0;
+}
 .Listings.listview {
   display: flex;
   flex-direction: column;
